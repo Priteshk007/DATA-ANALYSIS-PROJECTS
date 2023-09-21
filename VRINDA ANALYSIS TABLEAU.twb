@@ -603,13 +603,18 @@
         <datasource caption='Vrinda Store (Vrinda Store Data Analysis Tableau)' name='federated.10fe8jl1oaomzh14ew4od18d6tzn' />
       </datasources>
       <datasource-dependencies datasource='federated.10fe8jl1oaomzh14ew4od18d6tzn'>
+        <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
         <column datatype='string' name='[Channel]' role='dimension' type='nominal' />
         <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
         <column datatype='string' name='[Month]' role='dimension' type='nominal' />
+        <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
         <column-instance column='[Channel]' derivation='None' name='[none:Channel:nk]' pivot='key' type='nominal' />
         <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
         <column-instance column='[Month]' derivation='None' name='[none:Month:nk]' pivot='key' type='nominal' />
       </datasource-dependencies>
+      <filter class='categorical' column='[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]'>
+        <groupfilter function='level-members' level='[none:Age Group:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+      </filter>
       <filter class='categorical' column='[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]'>
         <groupfilter function='level-members' level='[none:Channel:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
       </filter>
@@ -636,6 +641,7 @@
             <datasource caption='Vrinda Store (Vrinda Store Data Analysis Tableau)' name='federated.10fe8jl1oaomzh14ew4od18d6tzn' />
           </datasources>
           <datasource-dependencies datasource='federated.10fe8jl1oaomzh14ew4od18d6tzn'>
+            <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
             <column datatype='integer' name='[Age]' role='measure' type='quantitative' />
             <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
             <column datatype='string' name='[Channel]' role='dimension' type='nominal' />
@@ -648,6 +654,7 @@
             <column-instance column='[__tableau_internal_object_id__].[Vrinda Store_E78129A10CF54BF6B1DD18C0954089D7]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Vrinda Store_E78129A10CF54BF6B1DD18C0954089D7:qk]' pivot='key' type='quantitative' />
             <column-instance column='[Order ID]' derivation='Count' name='[cnt:Order ID:qk]' pivot='key' type='quantitative' />
             <column caption='Index' datatype='integer' name='[index]' role='measure' type='quantitative' />
+            <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
             <column-instance column='[Channel]' derivation='None' name='[none:Channel:nk]' pivot='key' type='nominal' />
             <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
             <column-instance column='[Month]' derivation='None' name='[none:Month:nk]' pivot='key' type='nominal' />
@@ -673,6 +680,7 @@
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Month:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Gender:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]</column>
+            <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -795,10 +803,12 @@
             <datasource caption='Vrinda Store (Vrinda Store Data Analysis Tableau)' name='federated.10fe8jl1oaomzh14ew4od18d6tzn' />
           </datasources>
           <datasource-dependencies datasource='federated.10fe8jl1oaomzh14ew4od18d6tzn'>
+            <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
             <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
             <column datatype='string' name='[Channel]' role='dimension' type='nominal' />
             <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
             <column datatype='string' name='[Month]' role='dimension' type='nominal' />
+            <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
             <column-instance column='[Channel]' derivation='None' name='[none:Channel:nk]' pivot='key' type='nominal' />
             <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
             <column-instance column='[Month]' derivation='None' name='[none:Month:nk]' pivot='key' type='nominal' />
@@ -811,6 +821,7 @@
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Month:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Gender:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]</column>
+            <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -857,11 +868,13 @@
             <datasource caption='Vrinda Store (Vrinda Store Data Analysis Tableau)' name='federated.10fe8jl1oaomzh14ew4od18d6tzn' />
           </datasources>
           <datasource-dependencies datasource='federated.10fe8jl1oaomzh14ew4od18d6tzn'>
+            <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
             <column datatype='string' name='[Channel]' role='dimension' type='nominal' />
             <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
             <column datatype='string' name='[Month]' role='dimension' type='nominal' />
             <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
             <column-instance column='[Order ID]' derivation='Count' name='[cnt:Order ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
             <column-instance column='[Channel]' derivation='None' name='[none:Channel:nk]' pivot='key' type='nominal' />
             <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
             <column-instance column='[Month]' derivation='None' name='[none:Month:nk]' pivot='key' type='nominal' />
@@ -873,6 +886,7 @@
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Month:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Gender:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]</column>
+            <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -963,6 +977,7 @@
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Gender:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Month:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]</column>
+            <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -1033,12 +1048,14 @@
             <datasource caption='Vrinda Store (Vrinda Store Data Analysis Tableau)' name='federated.10fe8jl1oaomzh14ew4od18d6tzn' />
           </datasources>
           <datasource-dependencies datasource='federated.10fe8jl1oaomzh14ew4od18d6tzn'>
+            <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
             <column datatype='string' name='[Channel]' role='dimension' type='nominal' />
             <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
             <column datatype='string' name='[Month]' role='dimension' type='nominal' />
             <column datatype='string' name='[Order ID]' role='dimension' type='nominal' />
             <column datatype='string' name='[Status]' role='dimension' type='nominal' />
             <column-instance column='[Order ID]' derivation='Count' name='[cnt:Order ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
             <column-instance column='[Channel]' derivation='None' name='[none:Channel:nk]' pivot='key' type='nominal' />
             <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
             <column-instance column='[Month]' derivation='None' name='[none:Month:nk]' pivot='key' type='nominal' />
@@ -1051,6 +1068,7 @@
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Month:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Gender:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]</column>
+            <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -1106,10 +1124,12 @@
             <mapsource name='Tableau' />
           </mapsources>
           <datasource-dependencies datasource='federated.10fe8jl1oaomzh14ew4od18d6tzn'>
+            <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
             <column datatype='integer' name='[Amount]' role='measure' type='quantitative' />
             <column datatype='string' name='[Channel]' role='dimension' type='nominal' />
             <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
             <column datatype='string' name='[Month]' role='dimension' type='nominal' />
+            <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
             <column-instance column='[Channel]' derivation='None' name='[none:Channel:nk]' pivot='key' type='nominal' />
             <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
             <column-instance column='[Month]' derivation='None' name='[none:Month:nk]' pivot='key' type='nominal' />
@@ -1131,6 +1151,7 @@
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Gender:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:ship-state:nk]</column>
             <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]</column>
+            <column>[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]</column>
           </slices>
           <aggregation value='true' />
         </view>
@@ -1184,9 +1205,11 @@
         <datasource caption='Vrinda Store (Vrinda Store Data Analysis Tableau)' name='federated.10fe8jl1oaomzh14ew4od18d6tzn' />
       </datasources>
       <datasource-dependencies datasource='federated.10fe8jl1oaomzh14ew4od18d6tzn'>
+        <column datatype='string' name='[Age Group]' role='dimension' type='nominal' />
         <column datatype='string' name='[Channel]' role='dimension' type='nominal' />
         <column datatype='string' name='[Gender]' role='dimension' type='nominal' />
         <column datatype='string' name='[Month]' role='dimension' type='nominal' />
+        <column-instance column='[Age Group]' derivation='None' name='[none:Age Group:nk]' pivot='key' type='nominal' />
         <column-instance column='[Channel]' derivation='None' name='[none:Channel:nk]' pivot='key' type='nominal' />
         <column-instance column='[Gender]' derivation='None' name='[none:Gender:nk]' pivot='key' type='nominal' />
         <column-instance column='[Month]' derivation='None' name='[none:Month:nk]' pivot='key' type='nominal' />
@@ -1208,13 +1231,14 @@
           </formatted-text>
         </zone>
         <zone h='5300' id='23' mode='checkdropdown' name='Sheet 3' param='[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Channel:nk]' type-v2='filter' values='database' w='9412' x='15176' y='1000' />
+        <zone h='6400' id='26' mode='dropdown' name='Sheet 4' param='[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]' type-v2='filter' values='database' w='9412' x='69529' y='1600' />
       </zones>
       <devicelayouts>
         <devicelayout auto-generated='true' name='Phone'>
-          <size maxheight='2000' minheight='2000' sizing-mode='vscroll' />
+          <size maxheight='2050' minheight='2050' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='25' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98400' id='24' param='vert' type-v2='layout-flow' w='99058' x='471' y='800'>
+            <zone h='100000' id='30' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='29' param='vert' type-v2='layout-flow' w='99058' x='471' y='800'>
                 <zone forceUpdate='true' h='6700' id='12' type-v2='text' w='40059' x='28529' y='1300'>
                   <formatted-text>
                     <run bold='true' fontalignment='1' fontcolor='#f28e2b' fontname='Algerian' fontsize='18'>VRINDA STORE ANALYSIS DASHBOARD</run>
@@ -1230,6 +1254,15 @@
                   </zone-style>
                 </zone>
                 <zone h='5600' id='11' mode='checkdropdown' name='Sheet 4' param='[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Gender:nk]' type-v2='filter' values='database' w='9412' x='82529' y='1800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6400' id='26' mode='dropdown' name='Sheet 4' param='[federated.10fe8jl1oaomzh14ew4od18d6tzn].[none:Age Group:nk]' type-v2='filter' values='database' w='9412' x='69529' y='1600'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -1571,7 +1604,7 @@
           <default-map-tool-selection tool='2' />
         </viewpoint>
       </viewpoints>
-      <active id='7' />
+      <active id='26' />
       <simple-id uuid='{42F83843-B3F0-428F-83BD-31A47928EF7C}' />
     </window>
   </windows>
